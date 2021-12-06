@@ -1,0 +1,330 @@
+.warehouse-detail {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #327ec1;
+
+    .form-container {
+        width: calc(100% - 200px);
+        min-width: 500px;
+        max-width: 700px;
+        height: calc(100% - 50px);
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px 4px #0000001f;
+
+        .form {
+            width: calc(100%);
+            height: calc(100% - 140px);
+            padding: 0px;
+            margin-top: 40px;
+            list-style-type: none;
+            overflow: scroll;
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .form-row {
+                width: 300px;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                flex-direction: column;
+                padding-bottom: 30px;
+
+                .title {
+                    height: 20px;
+                    font-size: 12px;
+                    text-align: left;
+                    width: 100%;
+                    overflow: hidden;
+                }
+                .input {
+                    font-size: 20px;
+                    height: 30px;
+                    width: 100%;
+                    text-align: left;
+                    line-height: 30px;
+                    outline: none;
+                    overflow: hidden;
+                    border-bottom: solid 1px #327ec1;
+                }
+            }
+            .form-row-live {
+                width: 300px;
+                display: flex;
+                .title {
+                    height: 20px;
+                }
+                .input {
+                    height: 20px;
+                    width: 40px;
+                    margin-left: 10px;
+                    border-radius: 10px;
+                    position: relative;
+                    cursor: pointer;
+                    background-color: lightgray;
+
+                    &::after {
+                        content: "";
+                        left: 0px;
+                        height: 20px;
+                        width: 20px;
+                        border-radius: 10px;
+                        position: absolute;
+                        background-color: gray;
+                        transform: scale(0.8);
+                    }
+                }
+
+                .inputOn {
+                    height: 20px;
+                    width: 40px;
+                    margin-left: 10px;
+                    border-radius: 10px;
+                    position: relative;
+                    cursor: pointer;
+                    background-color: rgba(81, 223, 81, 0.452);
+
+                    &::after {
+                        content: "";
+                        right: 0px;
+                        height: 20px;
+                        width: 20px;
+                        border-radius: 10px;
+                        position: absolute;
+                        background-color: rgb(81, 223, 81);
+                        transform: scale(0.8);
+                    }
+                }
+            }
+        }
+
+        .submit-button {
+            left: 50%;
+            bottom: 50px;
+            width: 200px;
+            height: 50px;
+            color: white;
+            cursor: pointer;
+            font-size: 23px;
+            line-height: 50px;
+            position: absolute;
+            border-radius: 5px;
+            transform: translateX(20px);
+            background-color: #327ec1;
+
+            &:hover {
+                background-color: #2f73af;
+            }
+        }
+
+        .add-property-container {
+            right: 50%;
+            width: 200px;
+            height: 50px;
+            bottom: 50px;
+            position: absolute;
+
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 30px;
+
+            .property-title {
+                height: 20px;
+                width: 200px;
+                font-size: 12px;
+                text-align: left;
+                overflow: hidden;
+            }
+            .property-input {
+                font-size: 20px;
+                height: 30px;
+                width: 200px !important;
+                text-align: left;
+                line-height: 30px;
+                overflow: hidden;
+                outline: none;
+                border-bottom: solid 1px #327ec1;
+            }
+            .property-add {
+                top: -2px;
+                left: 100px;
+                width: 40px;
+                height: 20px;
+                font-size: 13px;
+                border-radius: 5px;
+                color: white;
+                line-height: 20px;
+                position: absolute;
+                cursor: pointer;
+                color: #327ec1;
+            }
+        }
+    }
+}
+
+.warehouse-list {
+    width: 100%;
+    height: 100%;
+
+    .list {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        height: calc(100% - 120px);
+        overflow: scroll;
+    }
+
+    .add-btn {
+        top: 30px;
+        right: 10px;
+        width: 70px;
+        height: 70px;
+        background-color: #327ec1;
+        border-radius: 50%;
+        border: solid 1px white;
+        color: white;
+        line-height: 70px;
+        font-weight: 700;
+        position: absolute;
+        cursor: pointer;
+        box-shadow: 0px 0px 3px #00000082;
+    }
+}
+
+/* row style */
+.row-continer {
+    width: calc(100% - 10px);
+    margin: 5px;
+    height: 60px;
+    display: flex;
+    box-shadow: 0px 0px 3px #00000024;
+
+    .row-item {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .label {
+            flex: 1;
+        }
+    }
+
+    &:hover {
+        background-color: #327ec126;
+    }
+}
+
+.row-continer-header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    background-color: #327ec1;
+
+    .row-item-header {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .label {
+            flex: 1;
+            font-weight: 700;
+            color: white;
+        }
+    }
+}
+
+// search style
+.search-container {
+    width: 100%;
+    height: 30px;
+    margin-top: 3px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    [contentEditable="true"]:empty:not(:focus):before {
+        content: attr(data-text);
+    }
+
+    .search-lable {
+        width: 200px;
+        height: 100%;
+        outline: none;
+        padding: 0px 5px;
+        text-align: left;
+        margin-left: 5px;
+        line-height: 30px;
+        border-radius: 3px;
+        border: solid 1px lightgray;
+    }
+
+    .search-filter {
+        height: 30px;
+        line-height: 30px;
+        border-radius: 5px;
+        margin-left: 10px;
+        color: white;
+        padding: 0px 8px;
+        cursor: pointer;
+        background-color: #327ec1;
+
+        &:hover {
+            background-color: rgb(84, 132, 223);
+        }
+    }
+
+    .filter-list-container {
+        top: 0px;
+        width: 140px;
+        min-height: 50px;
+        position: absolute;
+        margin-top: 35px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px 4px #0000001f;
+
+        .filter-list {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 5px 0px;
+            list-style-type: none;
+
+            li {
+                padding: 3px 10px;
+                text-align: left;
+                &:hover {
+                    background-color: lightgrey;
+                }
+            }
+        }
+
+        .close-list {
+            top: 3px;
+            right: 3px;
+            width: 20px;
+            height: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            position: absolute;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0px 0px 1px 2px #0000000a;
+        }
+    }
+}
